@@ -8,6 +8,8 @@
     <!-- versionCode is optional and Android only -->
 
     <name>ReminderApp</name>
+	
+	
 
     <description>
        sample
@@ -17,6 +19,9 @@
         Hardeep Shoker 
     </author>
 	
+	
+	 <access origin="http://remote.yunlingkeji.com" subdomains="true" />
+	 
 <gap:platform name="ios" />
 <gap:platform name="android" />
 
