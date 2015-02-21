@@ -12,12 +12,20 @@
     // Wait for PhoneGap to connect with the device
     //
     document.addEventListener("deviceready",onDeviceReady,false);
+	
+		window.addEventListener('message',function(event) {
+    alert(event.data);
+},false);
+
 
     // PhoneGap is ready to be used!
     //
     function onDeviceReady() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
+		
+		
+		
     }
 
     // Called when a photo is successfully retrieved
@@ -89,16 +97,19 @@
       alert('Failed because: ' + message);
     }
 
+
+
     </script>
   </head>
   <body>
+
     <button onclick="capturePhoto();">Capture Photo</button> <br>
     <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
     <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
     <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
 	
 	    <button onclick="javascript:window.location.href='http://remote.yunlingkeji.com/test/'">open</button><br>
-		
+		  <iframe src="http://remote.yunlingkeji.com/test/" />
 		
     <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     <img style="display:none;" id="largeImage" src="" />
